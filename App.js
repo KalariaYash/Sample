@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Content, Header } from "native-base";
 import { createDrawerNavigator, DrawerItems, createAppContainer } from 'react-navigation'
-import HomeScreen from './src/Components/homeScreen'
+import HomeScreen from './src/Components/HomeScreen'
+import RecipeDetails from './src/Components/RecipeDetails'
 
 class App extends React.Component {
   render() {
@@ -25,6 +26,9 @@ const CustomDrwerContentComponent = (props) => (
 const MyApp = createDrawerNavigator({
   "Home": {
     screen: HomeScreen
+  },
+  "Recipe":{
+    screen:RecipeDetails
   }
 }, {
     initialRouteName: 'Home',
